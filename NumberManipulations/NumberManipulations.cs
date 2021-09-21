@@ -9,10 +9,10 @@ namespace NumberManipulations
 {
     public class NumberManipulation
     {
-        public static void Manipulations(string number)
+        public static void Manipulations(string number, out string number3)
         {
             char[] symbols = number.ToCharArray();
-
+            number3 = "";
             for (int i = 0; i < symbols.Length; i++)
             {
                 string CountryCode = "";
@@ -47,6 +47,7 @@ namespace NumberManipulations
                                 number2 = Regex.Replace(number2, CountryCode, "");
                                 Console.WriteLine("Number is {2},\tCountry code is +{0},\tCountry name is {1}.", CountryCode, country.Name, number2);
                                 i = number.Length;
+                                number3 = number2;
                                 break;
                             }
                         }
