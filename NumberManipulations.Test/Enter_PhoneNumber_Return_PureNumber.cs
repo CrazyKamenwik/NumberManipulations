@@ -18,7 +18,6 @@ namespace NumberManipulations.Test
 
             [TestCase("dfjkg003752945", "2945")]
             [TestCase("+(375)2945", "2945")]
-            [TestCase("00ghh3742945", "2945")]
             [TestCase("00ghh3752945", "2945")]
             [TestCase("jkhadf", "")]
             public void InputIsNumber_Return(string number, string clearNumber)
