@@ -16,16 +16,17 @@ namespace NumberManipulations
             var number = Console.ReadLine();
             Console.WriteLine(number = Regex.Replace(number, @"[^0-9\+]", ""));
 
-            NumberManipulation.Manipulations(number);
+            NumberManipulation.Manipulations(number, out string number3);
         }
 
-        public void EnterNumber(string number1)
+        public string EnterNumber(string number1)
         {
             CountryModel countryModel = new CountryModel();
-            var number = Console.ReadLine();
-            Console.WriteLine(number = Regex.Replace(number1, @"[^0-9\+]", ""));
+            string number2 = number1;
+            number2 = Regex.Replace(number1, @"[^0-9\+]", "");
 
-            NumberManipulation.Manipulations(number1);
+            NumberManipulation.Manipulations(number2, out string number3);
+            return number3;
         }
     }
 }
